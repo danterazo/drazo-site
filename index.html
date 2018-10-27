@@ -28,18 +28,21 @@
 		<script>
 			var audio1 = new Audio('assets/audio/dante1.mp3');
 			var audio2 = new Audio('assets/audio/dante2.mp3');
+			var temp = 0;
 
 			function audioEasterEgg(letter){
-				if(letter == 'A'){
+				temp++;
+
+				if(x % 2 == 0){
 					audio1.play();
-				} else if(letter == 'B'){
+				} else {
 					audio2.play();
 				}
 			}
 		</script>
 
 		<span class="image avatar"><img src="assets/images/dante-headshot.jpg"
-										alt="" onclick="audioEasterEgg('B')"/></span>
+										alt="" onclick="audioEasterEgg()"/></span>
 		<style>
 			img:hover {
 				animation: shake 0.5s;
