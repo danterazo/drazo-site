@@ -30,10 +30,10 @@
 			var audio2 = new Audio('assets/audio/dante2.mp3');
 			var audioCounter = 0;
 
-			function audioEasterEgg(letter){
+			function audioEasterEgg(){
 				audioCounter++;
 
-				if((x%2) === 0){
+				if((audioCounter%2) === 0){
 					audio1.play();
 				} else {
 					audio2.play();
