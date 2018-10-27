@@ -28,12 +28,12 @@
 		<script>
 			var audio1 = new Audio('assets/audio/dante1.mp3');
 			var audio2 = new Audio('assets/audio/dante2.mp3');
-			var temp = 0;
+			var audioCounter = 0;
 
 			function audioEasterEgg(letter){
-				temp++;
+				audioCounter++;
 
-				if(x % 2 == 0){
+				if((x%2) === 0){
 					audio1.play();
 				} else {
 					audio2.play();
