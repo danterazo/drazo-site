@@ -1,212 +1,252 @@
 <!DOCTYPE HTML>
-<!-- 
+<!--
  /$$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$$ /$$$$$$$$
 | $$__  $$ /$$__  $$| $$$ | $$|__  $$__/| $$_____/
-| $$  \ $$| $$  \ $$| $$$$| $$   | $$   | $$      
-| $$  | $$| $$$$$$$$| $$ $$ $$   | $$   | $$$$$   
-| $$  | $$| $$__  $$| $$  $$$$   | $$   | $$__/   
-| $$  | $$| $$  | $$| $$\  $$$   | $$   | $$      
+| $$  \ $$| $$  \ $$| $$$$| $$   | $$   | $$
+| $$  | $$| $$$$$$$$| $$ $$ $$   | $$   | $$$$$
+| $$  | $$| $$__  $$| $$  $$$$   | $$   | $$__/
+| $$  | $$| $$  | $$| $$\  $$$   | $$   | $$
 | $$$$$$$/| $$  | $$| $$ \  $$   | $$   | $$$$$$$$
-|_______/ |__/  |__/|__/  \__/   |__/   |________/                                                
+|_______/ |__/  |__/|__/  \__/   |__/   |________/
 -->
 <html>
-	<head>
-        <title>Dante Razo's Page</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-        <!--<link rel="stylesheet" href="path/to/font-mfizz/font-mfizz.css">-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
+<head>
+	<title>Dante Razo's Page</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!--[if lte IE 8]>
+	<script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css"/>
+	<!--<link rel="stylesheet" href="path/to/font-mfizz/font-mfizz.css">-->
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+</head>
+<body>
+<!-- Header -->
+<section id="header">
+	<header>
+		<script>
+			var audio1 = new Audio('assets/audio/dante1.mp3');
+			var audio2 = new Audio('assets/audio/dante2.mp3');
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="assets/images/dante-headshot.jpg" alt="" /></span> 
-                    <style>
-                    img:hover {
-                        animation: shake 0.5s;
-                        animation-iteration-count: infinite;
-                    }
-                     @keyframes shake {
-                     0% {
-                    transform: translate(1px, 1px) rotate(0deg);
-                    }
-                     10% {
-                    transform: translate(-1px, -2px) rotate(-1deg);
-                    }
-                     20% {
-                    transform: translate(-3px, 0px) rotate(1deg);
-                    }
-                     30% {
-                    transform: translate(3px, 2px) rotate(0deg);
-                    }
-                     40% {
-                    transform: translate(1px, -1px) rotate(1deg);
-                    }
-                     50% {
-                    transform: translate(-1px, 2px) rotate(-1deg);
-                    }
-                     60% {
-                    transform: translate(-3px, 1px) rotate(0deg);
-                    }
-                     70% {
-                    transform: translate(3px, 1px) rotate(-1deg);
-                    }
-                     80% {
-                    transform: translate(-1px, -1px) rotate(1deg);
-                    }
-                     90% {
-                    transform: translate(1px, 2px) rotate(0deg);
-                    }
-                     100% {
-                    transform: translate(1px, -2px) rotate(-1deg);
-                    }
-                    }
-                    </style>
-                    
-					<h1 id="logo"><a href="#">Dante Razo</a></h1>
-                    <p>Computer Science student at<br>
-                    Indiana University </p>
+			function audioEasterEgg(letter){
+				if(letter == 'A'){
+					audio1.play();
+				} else if(letter == 'B'){
+					audio2.play();
+				}
+			}
+		</script>
+
+		<span class="image avatar"><img src="assets/images/dante-headshot.jpg"
+										alt="" onclick="audioEasterEgg('B')"/></span>
+		<style>
+			img:hover {
+				animation: shake 0.5s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes shake {
+				0% {
+					transform: translate(1px, 1px) rotate(0deg);
+				}
+				10% {
+					transform: translate(-1px, -2px) rotate(-1deg);
+				}
+				20% {
+					transform: translate(-3px, 0px) rotate(1deg);
+				}
+				30% {
+					transform: translate(3px, 2px) rotate(0deg);
+				}
+				40% {
+					transform: translate(1px, -1px) rotate(1deg);
+				}
+				50% {
+					transform: translate(-1px, 2px) rotate(-1deg);
+				}
+				60% {
+					transform: translate(-3px, 1px) rotate(0deg);
+				}
+				70% {
+					transform: translate(3px, 1px) rotate(-1deg);
+				}
+				80% {
+					transform: translate(-1px, -1px) rotate(1deg);
+				}
+				90% {
+					transform: translate(1px, 2px) rotate(0deg);
+				}
+				100% {
+					transform: translate(1px, -2px) rotate(-1deg);
+				}
+			}
+		</style>
+
+		<h1 id="logo"><a href="#">Dante Razo</a></h1>
+		<p>Computer Science student at<br>
+			Indiana University </p>
+	</header>
+	<nav id="nav">
+		<ul>
+			<li><a href="#one" class="active">About</a></li>
+			<!--<li><a href="#two">Skills</a></li>-->
+			<li><a href="#three">Projects</a></li>
+			<li><a href="#four">Awards and Honors</a></li>
+			<li><a href="#five">Contact</a></li>
+		</ul>
+	</nav>
+	<footer>
+		<ul class="icons">
+			<!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>-->
+			<li><a href="https://www.instagram.com/d.antinho/"
+				   class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="https://github.com/danterazo" class="icon fa-github"><span class="label">Github</span></a></li>
+			<li><a href="https://www.linkedin.com/in/drazo/" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a>
+			</li>
+			<!--<li><a href="mailto:contact@drazo.info" class="icon fa-envelope"><span class="label">Email</span></a></li> <!-- ?Subject=Hello -->
+		</ul>
+	</footer>
+</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+		<section id="one">
+			<div class="container">
+				<header class="major">
+					<h2>Welcome to Dante's Page</h2>
 				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<!--<li><a href="#two">Skills</a></li>-->
-						<li><a href="#three">Projects</a></li>
-                        <li><a href="#four">Awards and Honors</a></li>
-						<li><a href="#five">Contact</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>-->
-						<li><a href="https://www.instagram.com/d.antinho/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/danterazo" class="icon fa-github"><span class="label">Github</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/drazo/" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a></li>
-						<!--<li><a href="mailto:contact@drazo.info" class="icon fa-envelope"><span class="label">Email</span></a></li> <!-- ?Subject=Hello -->
-					</ul>
-				</footer>
-			</section>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one">
-							  <div class="container">
-									<header class="major">
-										<h2>Welcome to Dante's Page</h2>
-									</header>
-                                    <p>I'm a junior at Indiana University studying Computer Science with focuses on <strong>artificial intelligence</strong> and <strong>data science</strong>. I'm working towards minors in <strong>linguistics</strong> and <strong>computational linguistics</strong> as well. I work at IU's <em>School of Informatics, Computing and Engineering</em> and <em>Kelley School of Business</em> as a peer advisor and computer technician respectively. I have been programming for over 10 years with experience in Java, Python, and R, to name a few languages. I hope to work with machine learning in the future; specifically data science, AI, or natural language processing.</p>
-                                </div>
-							</section>
-
-						<!-- Two -->
-							
-						<!-- Three -->
-							<section id="three">
-							  <div class="container">
-									<h3>Projects</h3>
-									<!--<p>Below are some of my best projects.</p>-->
-									<div class="features">
-										<article>
-											<a href="#" class="image"><img src="assets/images/proj_c212.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Jungle: Java-Based Marketplace</h4>
-												<p>An Amazon-esque marketplace written in Java by a team of three. Jungle lets you register as a buyer or seller, list items for sale, buy items, receive shipping notifications, manage your account, and more. It uses CSV files to keep an offline database of accounts and inventory.<br><br>Final project for CSCI-C 212 "Software Systems".</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="assets/images/proj_b365.png" alt="" /></a>
-											<div class="inner">
-												<h4>Porto Seguro Safe Driver Prediction</h4>
-                                                <p>Used data provided by Brazilian auto insurance company Porto Seguro to predict the probability of a driver initiating an insurance claim in the next year. Used <strong>R</strong> for data preprocessing and <strong>Python</strong> to build the model. <br><br>Final project for CSCI-B 351 "Data Mining and Analysis". View the report <a href="assets/docs/b365_report.pdf">here</a>.</p>
-											</div>
-										</article>
-
-										<article>
-											<a href="#" class="image"><img src="assets/images/proj_b351.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Cryptocurrency Analysis AI</h4>
-												<p>Developed an AI in a team of two that predicts when to buy and sell popular cryptocurrencies. I used <strong>R</strong> for data preprocessing, <strong>Python</strong> for creating a framework, and the <strong>TensorFlow</strong> library for training a model.<br><br>Final project for CSCI-B 351 "Intro to Artificial Intelligence". View the report <a href="assets/docs/b351_report.pdf">here</a>.</p>
-											</div>
-										</article>
-  
-									</div>
-								</div>
-					  </section>
-                        
-							<section id="four">
-							  <div class="container">
-									<h3>Awards and Honors</h3>
-									<p>Below are some of the distinctions I've earned in my career so far.</p>
-									<div class="features">
-										<article>
-											<a href="#" class="image"><img src="assets/images/acc_hhsp.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Hudson and Holland Scholar</h4>
-												<p>Distinction given to underrepresented minority students at IU who are, in the program's words, "leaders and model citizens of the campus community."</p>
-											</div>
-										</article>
-                                        
-
-										<article>
-											<a href="#" class="image"><img src="assets/images/acc_hsf.png" alt="" /></a>
-											<div class="inner">
-												<h4>Hispanic Scholarship Fund Scholar</h4>
-												<p>Distinction and award given to students who are, in the organization's words, "among the best and brightest Latino students in the country."</p>
-											</div>
-										</article>
-                                        <!-- WIP
-										<article>
-											<a href="#" class="image"><img src="assets/images/acc_placeholder.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Snapped dark matter in the wild</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-                                        -->
-									</div>
-								</div>
-							</section>
-                        
-							<section id="five">
-							  <div class="container">
-									<h3>Contact Me</h3>
-                                    <p><strong>Email:</strong> dante@razonet.org</p><!-- <a href="contact@drazo.info" target="_top">contact@drazo.info</a></p> -->
-                                    <p><strong>PGP:</strong> <a href="assets/files/dantePGP.asc">Public Key</a></p>
-								</div>
-							</section>
-					</div>
-
-				<!-- Footer -->
-					<section id="footer">
-					  <div class="container">
-							<ul class="copyright">
-								<li>&copy; Dante Razo, 2018. All rights reserved.</li><li>Last Updated: 4/6/18</li>
-                                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
-
+				<p>I'm a junior at Indiana University studying Computer Science with focuses on <strong>artificial
+					intelligence</strong> and <strong>data science</strong>. I'm working towards minors in <strong>linguistics</strong>
+					and <strong>computational linguistics</strong> as well. I work at IU's <em>School of Informatics,
+						Computing and Engineering</em> and <em>Kelley School of Business</em> as a peer advisor and
+					computer technician respectively. I have been programming for over 10 years with experience in Java,
+					Python, and R, to name a few languages. I hope to work with machine learning in the future;
+					specifically data science, AI, or natural language processing.</p>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-	</body>
+		<!-- Two -->
+
+		<!-- Three -->
+		<section id="three">
+			<div class="container">
+				<h3>Projects</h3>
+				<!--<p>Below are some of my best projects.</p>-->
+				<div class="features">
+					<article>
+						<a href="#" class="image"><img src="assets/images/proj_c212.jpg" alt=""/></a>
+						<div class="inner">
+							<h4>Jungle: Java-Based Marketplace</h4>
+							<p>An Amazon-esque marketplace written in Java by a team of three. Jungle lets you register
+								as a buyer or seller, list items for sale, buy items, receive shipping notifications,
+								manage your account, and more. It uses CSV files to keep an offline database of accounts
+								and inventory.<br><br>Final project for CSCI-C 212 "Software Systems".</p>
+						</div>
+					</article>
+					<article>
+						<a href="#" class="image"><img src="assets/images/proj_b365.png" alt=""/></a>
+						<div class="inner">
+							<h4>Porto Seguro Safe Driver Prediction</h4>
+							<p>Used data provided by Brazilian auto insurance company Porto Seguro to predict the
+								probability of a driver initiating an insurance claim in the next year. Used
+								<strong>R</strong> for data preprocessing and <strong>Python</strong> to build the
+								model. <br><br>Final project for CSCI-B 351 "Data Mining and Analysis". View the report
+								<a href="assets/docs/b365_report.pdf">here</a>.</p>
+						</div>
+					</article>
+
+					<article>
+						<a href="#" class="image"><img src="assets/images/proj_b351.jpg" alt=""/></a>
+						<div class="inner">
+							<h4>Cryptocurrency Analysis AI</h4>
+							<p>Developed an AI in a team of two that predicts when to buy and sell popular
+								cryptocurrencies. I used <strong>R</strong> for data preprocessing,
+								<strong>Python</strong> for creating a framework, and the <strong>TensorFlow</strong>
+								library for training a model.<br><br>Final project for CSCI-B 351 "Intro to Artificial
+								Intelligence". View the report <a href="assets/docs/b351_report.pdf">here</a>.</p>
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="four">
+			<div class="container">
+				<h3>Awards and Honors</h3>
+				<p>Below are some of the distinctions I've earned in my career so far.</p>
+				<div class="features">
+					<article>
+						<a href="#" class="image"><img src="assets/images/acc_hhsp.jpg" alt=""/></a>
+						<div class="inner">
+							<h4>Hudson and Holland Scholar</h4>
+							<p>Distinction given to underrepresented minority students at IU who are, in the program's
+								words, "leaders and model citizens of the campus community."</p>
+						</div>
+					</article>
+
+
+					<article>
+						<a href="#" class="image"><img src="assets/images/acc_hsf.png" alt=""/></a>
+						<div class="inner">
+							<h4>Hispanic Scholarship Fund Scholar</h4>
+							<p>Distinction and award given to students who are, in the organization's words, "among the
+								best and brightest Latino students in the country."</p>
+						</div>
+					</article>
+					<!-- WIP
+					<article>
+						<a href="#" class="image"><img src="assets/images/acc_placeholder.jpg" alt="" /></a>
+						<div class="inner">
+							<h4>Snapped dark matter in the wild</h4>
+							<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+						</div>
+					</article>
+					-->
+				</div>
+			</div>
+		</section>
+
+		<section id="five">
+			<div class="container">
+				<h3>Contact Me</h3>
+				<p><strong>Email:</strong> dante@razonet.org</p>
+				<!-- <a href="contact@drazo.info" target="_top">contact@drazo.info</a></p> -->
+				<p><strong>PGP:</strong> <a href="assets/files/dantePGP.asc">Public Key</a></p>
+			</div>
+		</section>
+	</div>
+
+	<!-- Footer -->
+	<section id="footer">
+		<div class="container">
+			<ul class="copyright">
+				<li>&copy; Dante Razo, 2018. All rights reserved.</li>
+				<li>Last Updated: 4/6/18</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</section>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollzer.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+</body>
 </html>
 
 <!--
