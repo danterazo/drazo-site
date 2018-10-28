@@ -26,17 +26,25 @@
 <section id="header">
 	<header>
 		<script>
-			var audio1 = new Audio('assets/audio/dante1.mp3');
-			var audio2 = new Audio('assets/audio/dante2.mp3');
+			var hogan1 = new Audio('assets/audio/hogan1.mp3');
+			var hogan2 = new Audio('assets/audio/hogan2.mp3');
+			var donkey1 = new Audio('assets/audio/donkey1.mp3');
+			var donkey2 = new Audio('assets/audio/donkey2.mp3');
+			// var obama = new Audio('assets/audio/obama.mp3');
 			var audioCounter = 0;
 
 			function audioEasterEgg(){
 				audioCounter++;
 
-				if((audioCounter%2) === 0){
-					audio1.play();
-				} else {
-					audio2.play();
+				// ((audioCounter%2) === 0)
+				if(audioCounter === 0){
+					hogan1.play();
+				} else if(audioCounter === 1){
+					donkey1.play();
+				} else if(audioCounter === 2){
+					hogan2.play()
+				} else if(audioCounter === 3){
+					donkey2.play();
 				}
 			}
 		</script>
