@@ -30,7 +30,7 @@
 			var hogan2 = new Audio('assets/audio/hogan2.mp3');
 			var donkey1 = new Audio('assets/audio/donkey1.mp3');
 			var donkey2 = new Audio('assets/audio/donkey2.mp3');
-			// var obama = new Audio('assets/audio/obama.mp3');
+			var obama = new Audio('assets/audio/obama.mp3');
 			var audioCounter = -1;
 
 			function audioEasterEgg(){
@@ -42,7 +42,7 @@
 				} else if(audioCounter === 1){
 					donkey2.play();
 				} else if(audioCounter === 2){
-					hogan2.play()
+					obama.play()
 				} else if(audioCounter === 3){
 					audioCounter = -1;
 					audioEasterEgg();
