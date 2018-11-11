@@ -2441,7 +2441,7 @@
         .features article .topAligned {
 			display: inline-block;
 			padding-right: 2.5em;
-			vertical-align: 1050%;
+			vertical-align: 375px;
 			width: 48%;
 		}
 
