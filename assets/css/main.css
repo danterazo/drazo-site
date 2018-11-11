@@ -2436,6 +2436,7 @@
 
 			.features article .image img {
 				display: block;
+                vertical-align: top;
 				width: 100%;
 			}
 
