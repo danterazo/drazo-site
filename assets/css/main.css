@@ -2430,7 +2430,7 @@
 		.features article .image {
 			display: inline-block;
 			padding-right: 2.5em;
-			vertical-align: baseline;
+			vertical-align: top;
 			width: 48%;
 		}
 
