@@ -2430,15 +2430,20 @@
 		.features article .image {
 			display: inline-block;
 			padding-right: 2.5em;
-			/* vertical-align: top; */
+			vertical-align: middle;
 			width: 48%;
 		}
-
 			.features article .image img {
 				display: block;
-                /* vertical-align: top; */
 				width: 100%;
 			}
+
+        .features article .topAligned {
+			display: inline-block;
+			padding-right: 2.5em;
+			vertical-align: 1050%;
+			width: 48%;
+		}
 
 		.features article .inner {
 			display: inline-block;
@@ -2941,6 +2946,14 @@
 				margin: 0 0 2.25em 0;
 				padding-right: 0;
 				vertical-align: baseline;
+				width: 100%;
+			}
+
+            .features article .topAligned {
+				display: block;
+				margin: 0 0 2.25em 0;
+				padding-right: 0;
+				vertical-align: top;
 				width: 100%;
 			}
 
