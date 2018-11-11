@@ -2430,13 +2430,13 @@
 		.features article .image {
 			display: inline-block;
 			padding-right: 2.5em;
-			vertical-align: top;
+			/* vertical-align: top; */
 			width: 48%;
 		}
 
 			.features article .image img {
 				display: block;
-                vertical-align: top;
+                /* vertical-align: top; */
 				width: 100%;
 			}
 
