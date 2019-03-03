@@ -30,24 +30,17 @@
 		<script>
 			var hogan1 = new Audio('assets/audio/hogan1.mp3');
 			var hogan2 = new Audio('assets/audio/hogan2.mp3');
-			//var donkey = new Audio('assets/audio/donkey.mp3');
-			//var shrek = new Audio('assets/audio/donkey-shrek.mp3');
 			var obama = new Audio('assets/audio/obama.mp3');
 			var audioCounter = -1;
 
 			function audioEasterEgg(){
 				audioCounter++;
 
-				// ((audioCounter%2) === 0) // even/odd
 				if(audioCounter === 0){
-					hogan1.play();
-				} else if(audioCounter === 1){
 					obama.play();
+				} else if(audioCounter === 1){
+					hogan1.play();
 					audioCounter = -1;
-				} else if(audioCounter === 2){
-					//shrek.play();
-					//audioCounter = -1;
-					//audioEasterEgg();
 				} else if(audioCounter === 3){
 					audioCounter = -1;
 					audioEasterEgg();
