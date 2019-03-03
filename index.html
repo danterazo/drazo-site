@@ -303,7 +303,12 @@
 		<div class="container">
 			<ul class="copyright">
 				<li>&copy; Dante Razo, 2018. All rights reserved.</li>
-				<li>Last Updated: 4/6/18</li>
+				<script>
+					var lastUpdated = "Last Updated: " + new Date(document.lastModified);
+					document.writeln("<li>");
+					document.write(lastUpdated.substring(lastUpdated.length - 8, 0));
+					document.writeln("</li>");
+				</script>
 				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 			</ul>
 		</div>
