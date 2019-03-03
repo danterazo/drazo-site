@@ -5,14 +5,13 @@
 */
 
 function randomBG(){ // WIP as of 3/3/2019
+	const one = document.getElementById("one")
 	const numBG = 2;
-	var randBG = Math.floor(Math.random() * numBG) + 1;
-	const urlPrefix = 'url("../images/bkg/"'
+	var randBG = 1; // contingency plan
+	randBG = Math.floor(Math.random() * numBG) + 1;
+	const bgURL = 'url("../images/bkg/bkg' + randBG + '.jpg")';
 
-	var bgs = ["url('../images/bkg/1.jpg')",
-		"url('../images/bkg/2.jpg')"];
-	document.getElementById("one").style.bkg = bgs[randBG];
-	console.log("numBG: ", randBG)
+	one.style.setProperty('--randURL', bgURL);
 }
 
 

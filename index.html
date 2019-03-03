@@ -20,16 +20,18 @@
 	<!--<link rel="stylesheet" href="path/to/font-mfizz/font-mfizz.css">-->
 	<!--[if lte IE 8]>
 	<link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+
 </head>
-<body>
+
+<body onload="randomBG()">
 <!-- Header -->
 <section id="header">
 	<header>
 		<script>
 			var hogan1 = new Audio('assets/audio/hogan1.mp3');
 			var hogan2 = new Audio('assets/audio/hogan2.mp3');
-			var donkey = new Audio('assets/audio/donkey.mp3');
-			var shrek = new Audio('assets/audio/donkey-shrek.mp3');
+			//var donkey = new Audio('assets/audio/donkey.mp3');
+			//var shrek = new Audio('assets/audio/donkey-shrek.mp3');
 			var obama = new Audio('assets/audio/obama.mp3');
 			var audioCounter = -1;
 
@@ -41,8 +43,11 @@
 					hogan1.play();
 				} else if(audioCounter === 1){
 					obama.play();
+					audioCounter = -1;
 				} else if(audioCounter === 2){
-					shrek.play();
+					//shrek.play();
+					//audioCounter = -1;
+					//audioEasterEgg();
 				} else if(audioCounter === 3){
 					audioCounter = -1;
 					audioEasterEgg();
@@ -52,6 +57,7 @@
 
 		<span class="image avatar"><img src="assets/images/dante-headshot.jpg"
 										alt="" onclick="audioEasterEgg()"/></span>
+
 		<style>
 			img:hover {
 				animation: shake 0.5s;
@@ -97,7 +103,7 @@
 
 		<h1 id="logo"><a href="#">Dante Razo</a></h1>
 		<p>Computer Science student at<br>
-			Indiana University </p>
+			Indiana University</p>
 	</header>
 	<nav id="nav">
 		<ul>
@@ -139,7 +145,9 @@
 					and <strong>computational linguistics</strong> as well. I work at IU's <em>School of Informatics, Computing and
 						Engineering</em> and <em>Kelley School of Business</em> as a peer advisor and
 					computer technician respectively. I have been programming for almost 11 years with experience in
-					Java, Python, and R, to name a few languages. I hope to work with machine learning in the future. Specifically,
+					<strong>Java</strong>, <strong>Python</strong>, and <strong>R</strong>, to name a few languages. I hope to work with machine learning
+					in the
+					future. Specifically,
 					I'm interested in AI, machine learning, data science, and natural language processing.</p>
 			</div>
 		</section>
@@ -161,7 +169,8 @@
 								and <b>R</b> for processing non-audio data. Special permission was granted to train
 								neural networks for each speech synthesis solution on IU's
 								<a href="https://kb.iu.edu/d/bcqt">Big Red II</a> supercomputer.
-							</p><p>
+							</p>
+							<p>
 								Project approved on 2/26/19. You can read the Request for Proposal
 								(RFP) <a href="assets/docs/l445_chuvash_rev1.pdf">here</a>. Revision 2 is awaiting
 								approval and will be uploaded soon. Course project for LING-L 445 "Computation and
@@ -307,7 +316,7 @@
 					var offset = "Last Updated: ".length
 
 					document.writeln("<li>");
-					document.write(lastUpdated.substring(0,17) + ", " + lastUpdated.substring(17,29));
+					document.write(lastUpdated.substring(0, 17) + ", " + lastUpdated.substring(17, 29));
 					// document.write(lastUpdated.substring(0,29));
 					document.writeln("</li>");
 				</script>
