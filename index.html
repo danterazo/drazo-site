@@ -145,7 +145,8 @@
 					and <strong>computational linguistics</strong> as well. I work at IU's <em>School of Informatics, Computing and
 						Engineering</em> and <em>Kelley School of Business</em> as a peer advisor and
 					computer technician respectively. I have been programming for almost 11 years with experience in
-					<strong>Java</strong>, <strong>Python</strong>, and <strong>R</strong>, to name a few languages. I hope to work with machine learning
+					<strong>Java</strong>, <strong>Python</strong>, and <strong>R</strong>, to name a few languages. I hope to work with machine
+					learning
 					in the
 					future. Specifically,
 					I'm interested in AI, machine learning, data science, and natural language processing.</p>
@@ -310,11 +311,13 @@
 	<section id="footer">
 		<div class="container">
 			<ul class="copyright">
-				<li>&copy; Dante Razo, 2018. All rights reserved.</li>
+				<li> <!-- closed within following JavaScript -->
 				<script>
 					var lastUpdated = "Last Updated: " + new Date(document.lastModified)
 					var offset = "Last Updated: ".length
 
+					document.writeln("&copy; Dante Razo, 2017-" + lastUpdated.substring(25, 29)
+						+ ". All rights reserved.</li>") // close initial <li> tag
 					document.writeln("<li>");
 					document.write(lastUpdated.substring(0, 17) + ", " + lastUpdated.substring(17, 29));
 					// document.write(lastUpdated.substring(0,29));
