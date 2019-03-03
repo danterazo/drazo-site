@@ -304,9 +304,11 @@
 			<ul class="copyright">
 				<li>&copy; Dante Razo, 2018. All rights reserved.</li>
 				<script>
-					var lastUpdated = "Last Updated: " + new Date(document.lastModified);
+					var lastUpdated = "Last Updated: " + new Date(document.lastModified)
+
 					document.writeln("<li>");
-					document.write(lastUpdated.substring(lastUpdated.length - 8, 0));
+					document.write(lastUpdated.substring(0,17) + ", " + lastUpdated.substring(17,29));
+					// document.write(lastUpdated.substring(0,29));
 					document.writeln("</li>");
 				</script>
 				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
