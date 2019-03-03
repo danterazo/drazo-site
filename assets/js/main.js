@@ -9,7 +9,7 @@ function randomBG(){ // WIP as of 3/3/2019
 	const numBG = 2;
 	var randBG = 1; // contingency plan
 	randBG = Math.floor(Math.random() * numBG) + 1;
-	const bgURL = 'url("../images/bkg/bkg' + randBG + '.jpg")';
+	const bgURL = 'url("../images/bkg/bkg' + randBG + '.png")';
 
 	one.style.setProperty('--randURL', bgURL);
 }
