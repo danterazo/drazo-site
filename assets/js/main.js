@@ -14,9 +14,7 @@ function randomBG(){
 	header.style.setProperty('--randURL', backgroundImageURL);
 }
 
-
 (function($){
-
 	skel.breakpoints({
 		xlarge: '(max-width: 1680px)',
 		large: '(max-width: 1280px)',
@@ -26,8 +24,7 @@ function randomBG(){
 	});
 
 	$(function(){
-
-		var $body = $('body'),
+		let $body = $('body'),
 			$header = $('#header'),
 			$nav = $('#nav'), $nav_a = $nav.find('a'),
 			$wrapper = $('#wrapper');
@@ -44,14 +41,14 @@ function randomBG(){
 		});
 
 		// Header.
-		var ids = [];
+		let ids = [];
 
 		// Set up nav items.
 		$nav_a
 			.scrolly({offset: 44})
 			.on('click', function(event){
 
-				var $this = $(this),
+				let $this = $(this),
 					href = $this.attr('href');
 
 				// Not an internal link? Bail.
@@ -71,8 +68,7 @@ function randomBG(){
 
 			})
 			.each(function(){
-
-				var $this = $(this),
+				let $this = $(this),
 					href = $this.attr('href'),
 					id;
 
@@ -84,7 +80,6 @@ function randomBG(){
 				id = href.substring(1);
 				$this.attr('id', id + '-link');
 				ids.push(id);
-
 			});
 
 		// Initialize scrollzer.
@@ -98,8 +93,7 @@ function randomBG(){
 			'<a href="#header" class="toggle"></a>' +
 			'<span class="title">' + $('#logo').html() + '</span>' +
 			'</div>',
-		)
-			.appendTo($body);
+		).appendTo($body);
 
 		// Header.
 		$('#header')
@@ -118,7 +112,5 @@ function randomBG(){
 		if(skel.vars.os == 'wp' && skel.vars.osVersion < 10)
 			$('#titleBar, #header, #wrapper')
 				.css('transition', 'none');
-
 	});
-
 })(jQuery);
