@@ -28,10 +28,10 @@
 <section id="header">
 	<header>
 		<script>
-			var hogan1 = new Audio('assets/audio/hogan1.mp3');
-			var hogan2 = new Audio('assets/audio/hogan2.mp3');
-			var obama = new Audio('assets/audio/obama.mp3');
-			var audioCounter = -1;
+			const hogan1 = new Audio('assets/audio/hogan1.mp3');
+			const hogan2 = new Audio('assets/audio/hogan2.mp3');
+			const obama = new Audio('assets/audio/obama.mp3');
+			let audioCounter = -1;
 
 			function audioEasterEgg(){
 				audioCounter++;
@@ -100,16 +100,15 @@
 	</header>
 	<nav id="nav">
 		<ul>
-			<li><a href="#one" class="active">About</a></li>
+			<li><a href="#about" class="active">About</a></li>
 			<!--<li><a href="#two">Skills</a></li>-->
-			<li><a href="#three">Projects</a></li>
-			<li><a href="#four">Awards and Honors</a></li>
-			<li><a href="#five">Contact</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#awards">Awards and Honors</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</nav>
 	<footer>
 		<ul class="icons">
-			<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>-->
 			<li><a href="https://github.com/danterazo" class="icon fa-github"><span class="label">Github</span></a></li>
 			<li><a href="https://www.linkedin.com/in/drazo/" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a>
 			<li><a href="dantinho_" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -124,8 +123,8 @@
 	<!-- Main -->
 	<div id="main">
 
-		<!-- One -->
-		<section id="one">
+		<!-- ABOUT -->
+		<section id="about">
 			<div class="container">
 				<header class="major">
 					<h2>Welcome to Dante's Page</h2>
@@ -138,17 +137,11 @@
 					I'm interested in AI, machine learning, data science, and natural language processing.</p>
 			</div>
 		</section>
-		<!-- Junior yr jobs
-			I work at IU's <em>School of Informatics, Computing and Engineering</em> and <em>Kelley School of Business</em> as a peer advisor and computer technician respectively.
-		-->
 
-		<!-- Two -->
-
-		<!-- Three -->
-		<section id="three">
+		<!-- PROJECTS -->
+		<section id="projects">
 			<div class="container">
 				<h3>Projects</h3>
-				<!--<p>Below are some of my best projects and reports.</p>-->
 				<div class="features">
 					<article>
 						<a class="image"><img src="assets/images/dnn.png" alt="Deep Neural Network"/></a>
@@ -251,7 +244,8 @@
 			</div>
 		</section>
 
-		<section id="four">
+		<!-- Awards -->
+		<section id="awards">
 			<div class="container">
 				<h3>Awards and Honors</h3>
 				<p>Below are some of the distinctions I've earned in my career so far.</p>
@@ -272,24 +266,15 @@
 								best and brightest Latino students in the country."</p>
 						</div>
 					</article>
-					<!-- WIP
-					<article>
-						<a class="image"><img src="assets/images/acc_placeholder.jpg" alt="" /></a>
-						<div class="inner">
-							<h4>Snapped dark matter in the wild</h4>
-							<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-						</div>
-					</article>
-					-->
 				</div>
 			</div>
 		</section>
 
-		<section id="five">
+		<!-- Contact -->
+		<section id="contact">
 			<div class="container">
 				<h3>Contact Me</h3>
 				<p><strong>Email:</strong> dante (at) razonet.org</p>
-				<!-- <a href="contact@drazo.info" target="_top">contact@drazo.info</a></p> -->
 				<p><strong>PGP:</strong> <a href="assets/files/dantePGP.asc">Public Key</a></p>
 			</div>
 		</section>
@@ -301,8 +286,8 @@
 			<ul class="copyright">
 				<li> <!-- closed within following JavaScript -->
 					<script>
-						var lastUpdated = "Last Updated: " + new Date(document.lastModified)
-						var offset = "Last Updated: ".length
+						const lastUpdated = "Last Updated: " + new Date(document.lastModified)
+						const offset = "Last Updated: ".length
 
 						document.writeln("&copy; Dante Razo, 2017-" + lastUpdated.substring(25, 29)
 							+ ". All rights reserved.</li>") // close initial <li> tag
