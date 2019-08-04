@@ -4,14 +4,14 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-function randomBG(){ // WIP as of 3/3/2019
-	const one = document.getElementById("one")
-	const numBG = 2;
-	var randBG = 1; // contingency plan
-	randBG = Math.floor(Math.random() * numBG) + 1;
-	const bgURL = 'url("../images/bkg/bkg' + randBG + '.png")';
+function randomBG(){
+	const header = document.getElementById("about")
+	const totalNumBackgrounds = 2;
+	let randomBackground;
+	randomBackground = Math.floor(Math.random() * totalNumBackgrounds) + 1;
+	const backgroundImageURL = 'url("../images/bkg/bkg' + randomBackground + '.png")';
 
-	one.style.setProperty('--randURL', bgURL);
+	header.style.setProperty('--randURL', backgroundImageURL);
 }
 
 

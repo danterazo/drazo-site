@@ -2986,7 +2986,7 @@ input[type="button"]:disabled,
 }
 
 /* One */
-#one:before {
+#about:before {
     /* background-image: url("../images/bkg/bkg1.jpg");  // DEFAULT */
     background-image: var(--randURL);
     background-position: top left;
@@ -3161,7 +3161,7 @@ input[type="button"]:disabled,
     }
 
     /* One */
-    #one:before {
+    #about:before {
         height: 10em;
     }
 
@@ -3360,7 +3360,7 @@ input[type="button"]:disabled,
     }
 
     /* One */
-    #one:before {
+    #about:before {
         height: 7em;
     }
 
