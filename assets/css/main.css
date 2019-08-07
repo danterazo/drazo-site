@@ -3004,7 +3004,7 @@ input[type="button"]:disabled,
 #about:before {
     /* background-image: url("../images/bkg/bkg1.jpg");  // DEFAULT */
     background-image: var(--randURL);
-    background-position: top left;
+    background-position: bottom left;
     background-repeat: no-repeat;
     background-size: cover;
     content: '';
