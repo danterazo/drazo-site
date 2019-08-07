@@ -2807,7 +2807,8 @@ input[type="button"]:disabled,
 .features article .image {
     display: inline-block;
     padding-right: 2.5em;
-    vertical-align: middle;
+    vertical-align: top;
+    margin-top: 1rem;
     width: 48%;
 }
 
