@@ -6,7 +6,7 @@
 
 function randomBG(){
 	const header = document.getElementById("about")
-	const totalNumBackgrounds = 2;
+	const totalNumBackgrounds = 4;
 	let randomBackground;
 	randomBackground = Math.floor(Math.random() * totalNumBackgrounds) + 1;
 	const backgroundImageURL = 'url("../images/bkg/bkg' + randomBackground + '.png")';
