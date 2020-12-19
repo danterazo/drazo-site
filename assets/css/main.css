@@ -3003,17 +3003,15 @@ input[type="button"]:disabled,
 
 /* One */
 #about:before {
-    /* background-image: url("../images/bkg/bkg1.jpg");  // DEFAULT */
-    background-image: var(--randURL);
+    background-image: url("../images/bkg/bkg4.PNG");
+    /*background-image: var(--randURL);*/
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
     content: '';
     display: block;
-    /*height: 15em;*/
     height: 25.75em; /* HEADER HEIGHT */
     width: 120%;
-    /*object-fit: fill;*/
 }
 
 /* Footer */

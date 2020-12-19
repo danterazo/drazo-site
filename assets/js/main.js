@@ -6,11 +6,10 @@
 
 function randomBG(){
 	const header = document.getElementById("about")
-	// const totalNumBackgrounds = 5;
-	// let randomBackground;
-	// randomBackground = Math.floor(Math.random() * totalNumBackgrounds) + 1;
-	// const backgroundImageURL = 'url("../images/bkg/bkg' + randomBackground + '.png")';
-	const backgroundImageURL = 'url("../images/bkg/bkg4.PNG)'; // static background for the time being
+	const totalNumBackgrounds = 5;
+	let randomBackground;
+	randomBackground = Math.floor(Math.random() * totalNumBackgrounds) + 1;
+	const backgroundImageURL = 'url("../images/bkg/bkg' + randomBackground + '.png")';
 
 	header.style.setProperty('--randURL', backgroundImageURL);
 }
