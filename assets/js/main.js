@@ -10,7 +10,7 @@ function randomBG(){
 	// let randomBackground;
 	// randomBackground = Math.floor(Math.random() * totalNumBackgrounds) + 1;
 	// const backgroundImageURL = 'url("../images/bkg/bkg' + randomBackground + '.png")';
-	const backgroundImageURL = 'url("../images/bkg/bkg' + "4" + '.png")'; // static background for time being
+	const backgroundImageURL = 'url("../images/bkg/bkg4.PNG)'; // static background for the time being
 
 	header.style.setProperty('--randURL', backgroundImageURL);
 }
