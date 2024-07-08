@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
  /$$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$$ /$$$$$$$$
 | $$__  $$ /$$__  $$| $$$ | $$|__  $$__/| $$_____/
@@ -10,510 +10,549 @@
 |_______/ |__/  |__/|__/  \__/   |__/   |________/
 -->
 <html>
-<head>
-	<title>Dante Razo's Page</title>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1" name="viewport"/>
-	<link href="assets/css/main.css" rel="stylesheet"/>
-</head>
 
-<body onload="randomBG()">
-<!-- Header -->
-<section id="header">
-	<header>
-		<script>
-			const hogan = new Audio('assets/audio/hogan2.mp3');
-			const obama = new Audio('assets/audio/obama-welcome.mp3');
-			const watto = new Audio('assets/audio/watto-better.mp3');
-			const jarjar = new Audio('assets/audio/jarjar-smiling.mp3');
-			let audioCounter = 0;
+  <head>
+    <title>Dante Razo's Page</title>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
-			function audioEasterEgg(){
-				audioCounter++;
+  <body onload="randomBG()">
+    <!-- Header -->
+    <section id="header">
+      <header>
+        <script>
+          const hogan = new Audio("assets/audio/hogan2.mp3");
+          const obama = new Audio("assets/audio/obama-welcome.mp3");
+          // const watto = new Audio("assets/audio/watto-better.mp3");
+          // const jarjar = new Audio("assets/audio/jarjar-smiling.mp3");
+          let audioCounter = 0;
 
-				if(audioCounter === 1){
-					hogan.play();
-				} else if(audioCounter === 2){
-					obama.play();
-				} else if(audioCounter === 3){
-					watto.play();
-				} else if(audioCounter === 4){
-					jarjar.play();
-				} else if(audioCounter === 5){
-					audioCounter = 0;
-					audioEasterEgg();
-				}
-			}
-		</script>
+          function audioEasterEgg() {
+            audioCounter++;
 
-		<style>
-            img:hover {
-                animation: shake 0.5s;
-                animation-iteration-count: infinite;
+            if (audioCounter === 1) { obama.play(); }
+            else if (audioCounter === 2) { hogan.play(); }
+            // else if (audioCounter === 3) { watto.play(); }
+            // else if (audioCounter === 4) { jarjar.play(); }
+            else {
+              audioCounter = 0;
+              audioEasterEgg();
+            }
+          }
+        </script>
+
+        <style>
+          img:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+          }
+
+          @keyframes shake {
+            0% {
+              transform: translate(1px, 1px) rotate(0deg);
             }
 
-            @keyframes shake {
-                0% {
-                    transform: translate(1px, 1px) rotate(0deg);
-                }
-                10% {
-                    transform: translate(-1px, -2px) rotate(-1deg);
-                }
-                20% {
-                    transform: translate(-3px, 0px) rotate(1deg);
-                }
-                30% {
-                    transform: translate(3px, 2px) rotate(0deg);
-                }
-                40% {
-                    transform: translate(1px, -1px) rotate(1deg);
-                }
-                50% {
-                    transform: translate(-1px, 2px) rotate(-1deg);
-                }
-                60% {
-                    transform: translate(-3px, 1px) rotate(0deg);
-                }
-                70% {
-                    transform: translate(3px, 1px) rotate(-1deg);
-                }
-                80% {
-                    transform: translate(-1px, -1px) rotate(1deg);
-                }
-                90% {
-                    transform: translate(1px, 2px) rotate(0deg);
-                }
-                100% {
-                    transform: translate(1px, -2px) rotate(-1deg);
-                }
+            10% {
+              transform: translate(-1px, -2px) rotate(-1deg);
             }
-		</style>
 
-		<span class="image avatar"><img alt="The man, the myth, the legend"
-		                                onclick="audioEasterEgg()"
-		                                src="assets/images/dante/dante2022-grad.jpg"/></span>
-		<h1 id="logo"><a href="#">Dante Razo</a></h1>
-		<p>Machine Learning Engineer<br>Target Corporation</p>
-	</header>
-	<nav id="nav">
-		<ul>
-			<li><a class="active" href="#about">About</a></li>
-			<li><a href="#experience">Work Experience</a></li>
-			<li><a href="#education">Education</a></li>
-			<li><a href="#certificates">Certificates</a></li>
-			<li><a href="#publications">Publications</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#awards">Awards and Honors</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-	</nav>
-	<footer>
-		<ul class="icons">
-			<li><a class="icon fa-github" href="https://github.com/danterazo"><span class="label">Github</span></a></li>
-			<li><a class="icon fa-linkedin-square" href="https://www.linkedin.com/in/danterazo/"><span class="label">LinkedIn</span></a>
-			<li><a class="icon fa-twitter" href="https://twitter.com/dantinho_"><span class="label">Twitter</span></a></li>
-		</ul>
-	</footer>
-</section>
+            20% {
+              transform: translate(-3px, 0px) rotate(1deg);
+            }
 
-<!-- Wrapper -->
-<div id="wrapper">
+            30% {
+              transform: translate(3px, 2px) rotate(0deg);
+            }
 
-	<!-- Main -->
-	<div id="main">
+            40% {
+              transform: translate(1px, -1px) rotate(1deg);
+            }
 
-		<!-- ABOUT -->
-		<section id="about">
-			<div class="container">
-				<header class="major">
-					<h2>Welcome to Dante's Page</h2>
-				</header>
-				<p> I'm a Machine Learning Engineer at Target and a 2020 graduate of Indiana University. I studied computer science
-					with a focus on <strong>artificial intelligence</strong> and <strong>data science</strong>. I earned minors in
-					<strong>linguistics</strong> and <strong>computational</strong> linguistics as well. I have been programming for 14+
-					years with experience in <strong>Python</strong>, <strong>R</strong>, <strong>React</strong>, and more.
-				</p>
-				<p> In 2020 I was an undergraduate researcher under Dr. Sandra Kübler of the Indiana University Department of Linguistics.
-					Our <a href="https://www.aclweb.org/anthology/2020.alw-1.9/">paper</a> on the role of biased data in abusive language
-					detection was accepted into the <a href="https://www.workshopononlineabuse.com/">Fourth Workshop on Online Abusive and
-						Harms</a> and presented at the <a href="https://2020.emnlp.org/">2020 Conference on Empirical Methods in Natural
-						Language Processing</a>.
-				</p>
+            50% {
+              transform: translate(-1px, 2px) rotate(-1deg);
+            }
 
-				<p>I'm currently working on overhauling this site using <strong>ReactJS</strong>, <strong>JavaScript (JSX)</strong>, and
-					<strong>SCSS</strong>. Stay tuned!</p>
-			</div>
-		</section>
+            60% {
+              transform: translate(-3px, 1px) rotate(0deg);
+            }
 
-		<!-- WORK EXPERIENCE -->
-		<section id="experience">
-			<div class="container">
-				<h3>Work Experience</h3>
-				Check out my <a href="https://www.linkedin.com/in/danterazo/">LinkedIn page</a> for my full education and work history!
-			</div>
-		</section>
+            70% {
+              transform: translate(3px, 1px) rotate(-1deg);
+            }
 
-		<!-- EDUCATION -->
-		<section id="education">
-			<div class="container">
-				<h3>Education</h3>
-				<div class="features">
-					<article>
-						<a class="image"><img alt="Indiana University" src="assets/images/school/iu-logo.png"/></a>
-						<div class="inner">
-							<h4>Indiana University, Bloomington</h4>
-							<h5>Bachelor of Science, Computer Science</h5>
-							<h5>August 2016 - December 2020</h5>
-							<br>
-							<h5>Concentrations:</h5>
-							<ul>
-								<li>Artificial Intelligence</li>
-								<li>Data Science</li>
-							</ul>
-							<br>
-							<h5>Minors:</h5>
-							<ul>
-								<li>Linguistics</li>
-								<li>Computational Linguistics</li>
-							</ul>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
+            80% {
+              transform: translate(-1px, -1px) rotate(1deg);
+            }
 
-		<!-- CERTIFICATES -->
-		<section id="certificates">
-			<div class="container">
-				<h3>Certificates</h3>
-				<div class="features">
-					<article>
-						<a class="image"><img alt="Cornell University" src="assets/images/school/cornell-logo.png"/></a>
-						<div class="inner">
-							<h4>Cornell University</h4>
-							<h5>Certificate, Machine Learning</h5>
-							<h5>May - September 2023</h5>
+            90% {
+              transform: translate(1px, 2px) rotate(0deg);
+            }
+
+            100% {
+              transform: translate(1px, -2px) rotate(-1deg);
+            }
+          }
+        </style>
+
+        <span class="image avatar">
+          <img alt="The man, the myth, the legend" onclick="audioEasterEgg()" src="assets/images/dante/dante2022-grad.jpg" />
+        </span>
+        <h2 id="logo"> <a href="#">Dante Razo</a> </h2>
+        <p>
+          Machine Learning Engineer<br>
+          Target Corporation
+        </p>
+      </header>
+      <nav id="nav">
+        <ul>
+          <li><a class="active" href="#about">About</a></li>
+          <li><a href="#experience">Work Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#awards">Awards and Honors</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <footer>
+        <ul class="icons">
+          <li><a class="icon fa-github" href="https://github.com/danterazo"><span class="label">Github</span></a></li>
+          <li><a class="icon fa-linkedin-square" href="https://www.linkedin.com/in/danterazo/"><span class="label">LinkedIn</span></a></li>
+          <li><a class="icon fa-twitter" href="https://twitter.com/dantinho_"><span class="label">Twitter</span></a></li>
+        </ul>
+      </footer>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+        <!-- About -->
+        <section id="about">
+          <div class="container">
+            <header class="major">
+              <h1>Welcome to Dante's Page!</h1>
+            </header>
+
+            <p>
+              I'm a Machine Learning Engineer at Target and a 2020 graduate of Indiana University.
+              I studied computer science with a focus on <strong>artificial intelligence</strong> and <strong>data science</strong>.
+              I earned minors in <strong>linguistics</strong> and <strong>computational</strong> linguistics as well.
+              I have been programming for 17+ years with experience in <strong>Python</strong>, <strong>R</strong>, <strong>React</strong>, and more.
+            </p>
+            <p>
+              In 2020 I was an undergraduate researcher under Dr. Sandra Kübler of the Indiana University Department of Linguistics.
+              Our <a href="https://www.aclweb.org/anthology/2020.alw-1.9/">paper</a> on the role of biased data in abusive language detection was accepted into the
+              <a href="https://www.workshopononlineabuse.com/">Fourth Workshop on Online Abusive and Harms</a> and presented at the
+              <a href="https://2020.emnlp.org/">2020 Conference on Empirical Methods in Natural Language Processing</a>.
+            </p>
+
+            <p>
+              I will soon overhaul this site with <strong>ReactJS</strong>, <strong>TypeScript</strong>, and <strong>SCSS</strong>. Stay tuned!
+            </p>
+          </div>
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section id="experience">
+          <div class="container">
+            <h2>Work Experience</h2>
+
+            Check out my <a href="https://www.linkedin.com/in/danterazo/">LinkedIn page</a> for my full education and work history!
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+          <div class="container">
+            <h2>Education</h2>
+
+            <div class="features">
+              <article>
+                <a class="image"><img alt="Indiana University" src="assets/images/school/iu-logo.png" /></a>
+                <div class="inner">
+                  <h3>Indiana University, Bloomington</h3>
+                  <h4>Bachelor of Science, Computer Science</h4>
+                  <h4>August 2016 - December 2020</h4>
+                  <br>
+                  <h4>Concentrations:</h4>
+                  <ul>
+                    <li>Artificial Intelligence</li>
+                    <li>Data Science</li>
+                  </ul>
+                  <br>
+                  <h4>Minors:</h4>
+                  <ul>
+                    <li>Linguistics</li>
+                    <li>Computational Linguistics</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATES -->
+        <section id="certificates">
+          <div class="container">
+            <h2>Certificates</h2>
+
+            <div class="features">
+              <article>
+                <a class="image"><img alt="Cornell University" src="assets/images/school/cornell-logo.png" /></a>
+                <div class="inner">
+                  <h3>Cornell University</h3>
+                  <h4>Certificate, Machine Learning</h4>
+                  <h5>May - September 2023</h5>
                   <br>
                   <h5>Links:</h5>
                   <ul>
                     <li><a href="assets/docs/certificates/cornell-certificate-razo.pdf">PDF Credential</a></li>
                   </ul>
-						</div>
-					</article>
-					<article>
-						<a class="image"><img alt="MIT" src="assets/images/school/mit-logo.png"/></a>
-						<div class="inner">
-							<h4>Massachusetts Institute of Technology</h4>
-							<h5>Certificate, Machine Learning in Business</h5>
-							<h5>March - May 2022</h5>
+                </div>
+              </article>
+              <article>
+                <a class="image"><img alt="MIT" src="assets/images/school/mit-logo.png" /></a>
+                <div class="inner">
+                  <h3>Massachusetts Institute of Technology</h3>
+                  <h4>Certificate, Machine Learning in Business</h4>
+                  <h5>March - May 2022</h5>
                   <br>
                   <h5>Links:</h5>
                   <ul>
                     <li><a href="https://mitsloan.credential.getsmarter.com/635193f2-4a2f-4fc4-92c2-2ca3fe89a4f9">Online Credential</a></li>
                     <li><a href="assets/docs/certificates/mit-certificate-razo.pdf">PDF Copy of Credential</a></li>
                   </ul>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
 
-		<!-- PUBLICATIONS -->
-		<section id="publications">
-			<div class="container">
-				<h3>Publications</h3>
-				<div class="features">
-					<article>
-						<a class="image"><img alt="" src="assets/images/publications/acl.png"/></a>
-						<div class="inner">
-							<h4>Investigating Sampling Bias in Abusive Language Detection</h4>
-							<p>Lead author of a paper investigating the role of bias in abusive language detection. Submitted to the <a
-									href="https://www.workshopononlineabuse.com/">4th Workshop on Online Abuse and Harms</a>, colocated
-								with the <a href="https://2020.emnlp.org/">2020 Conference on Empirical Methods in Natural Language
-									Processing</a>.<br><br>
-							</p>
-							<p>
-								View the paper <a href="https://www.aclweb.org/anthology/2020.alw-1.9/">Research Paper (ACL Online Copy)</a></li>
+        <!-- PUBLICATIONS -->
+        <section id="publications">
+          <div class="container">
+            <h2>Publications</h2>
+            <div class="features">
+              <article>
+                <a class="image"><img alt="" src="assets/images/publications/acl.png" /></a>
+                <div class="inner">
+                  <h2>Investigating Sampling Bias in Abusive Language Detection</h2>
+                  <p>
+                    Lead author of a paper investigating the role of bias in abusive language detection. Submitted to the
+                    <a href="https://www.workshopononlineabuse.com/">4th Workshop on Online Abuse and Harms</a>, colocated with the
+                    <a href="https://2020.emnlp.org/">2020 Conference on Empirical Methods in Natural Language Processing</a>.<br>
+                  </p>
+                  <h4>Links:</h4>
+                  <ul>
+                    <li><a href="https://www.aclweb.org/anthology/2020.alw-1.9/">Research Paper (ACL Online Copy)</a></li>
                     <li><a href="assets/docs/papers/emnlp-paper.pdf">PDF Copy of Research Paper</a></li>
                   </ul>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
 
-		<!-- PROJECTS -->
-		<section id="projects">
-			<div class="container">
-				<h3>Projects</h3>
-				<div class="features">
-					<article>
-						<a class="image"><img alt="Deep Neural Network" src="assets/images/projects/dnn.png"/></a>
-						<div class="inner">
-							<h4>Speech Synthesis for the Chuvash Language with Deep Neural Networks</h4>
-							<p>I trained a few popular speech synthesizers to produce intelligible Chuvash audio clips from written
-								samples of the language. I used <b>Python</b> as the primary programming language and <b>R</b> for
-								processing non-audio data. Special permission was granted to train neural networks for each speech
-								synthesis solution on IU's <a href="https://kb.iu.edu/d/bcqt">Big Red II</a> supercomputer.
-							</p>
-							<p>
-								Read the paper <a href="assets/docs/l445-chuvash.pdf">here</a>, and the Request for Proposal (RFP)
-								<a href="assets/docs/l445-chuvash-rfp.pdf">here</a>. Code is available in my
-								<a href="https://github.com/danterazo/SP19-LING-L545"> class repository</a> on GitHub. Final project for
-								LING-L 445 "Computation and Linguistic Analysis," a graduate level course.
-							</p>
-						</div>
-					</article>
-					<article>
-						<a class="image"><img alt="RStudio IDE" src="assets/images/projects/rstudio.png"/></a>
-						<div class="inner">
-							<h4>TechPointX Xbot Digital Assistant Data Analysis</h4>
-							<p>I used <b>R</b> to observe trends in a provided dataset and wrote a report to discuss my findings. This was
-								part of the data science technical screening for the Xtern Summer 2019 internship program. I passed the
-								screening and earned a spot in the Xtern Class of 2019 as a Software Engineer.<br> <br>View the report <a
-										href="assets/docs/xtern2019-datascience.pdf">here</a>.
-							</p>
-						</div>
-					</article>
-					<article>
-						<a class="image topAligned"><img alt="Xtern Bootcamp" src="assets/images/projects/xtern-bootcamp.png"/></a>
-						<div class="inner">
-							<h4>Web Development Projects for Xtern Bootcamp 2018</h4>
-							<p>I worked on 4 projects for Xtern Bootcamp 2018 that utilized a mix of <b>HTML</b>, <b>JavaScript</b>, the
-								<b>ReactJS</b> library, and <b>CSS</b>.
-							<ol type="1">
-								<li><a href="https://danterazo.github.io/chrismess/">Chrismess</a></li>
-								<ul>
-									<li>Served as an introduction to the DOM and DOM Manipulation.</li>
-									<li><a href="https://github.com/danterazo/chrismess">Source Code</a></li>
-								</ul>
-								<li><a href="https://danterazo.github.io/dwarf-underground/">Dwarf Underground</a></li>
-								<ul>
-									<li>Exercise in translating vanilla HTML and JavaScript to React components and JSX.</li>
-									<li><a href="https://github.com/danterazo/dwarf-underground">Source Code</a></li>
-								</ul>
-								<li><a href="https://github.com/danterazo/api-party">API Party (Code, <b>WIP</b>)</a></li>
-								<ul>
-									<li>Exercise in API usage; abandoned in favor of Chatarang due to limited time.</li>
-								</ul>
-								<li><a href="https://chat-xtern.firebaseapp.com/">Chatarang</a></li>
-								<ul>
-									<li>Chat app that utilizes Firebase for GitHub/Google authentication and message storage in a
-										database.
-									</li>
-									<li><a href="https://github.com/danterazo/chatarang">Source Code</a></li>
-								</ul>
-							</ol>
-							</p>
-						</div>
-					</article>
-					<article>
-						<a class="image"><img alt="C212" src="assets/images/projects/proj-c212.jpg"/></a>
-						<div class="inner">
-							<h4>Jungle: Java-Based Marketplace</h4>
-							<p>An Amazon-esque marketplace written in <b>Java</b> by a team of three. Jungle lets you register as a buyer
-								or seller, list items for sale, buy items, receive shipping notifications, manage your account, and more.
-								It uses CSV files to keep an offline database of accounts and inventory.<br><br>Final project for CSCI-C
-								212 "Software Systems".
-							</p>
-						</div>
-					</article>
-					<article>
-						<a class="image"><img alt="B365" src="assets/images/projects/proj-b365.png"/></a>
-						<div class="inner">
-							<h4>Porto Seguro Safe Driver Prediction</h4>
-							<p>Used data provided by Brazilian auto insurance company Porto Seguro to predict the probability of a driver
-								initiating an insurance claim in the next year. Used <strong>R</strong> for data preprocessing and
-								<strong>Python</strong> to build the model. <br><br>Final project for CSCI-B 365 "Data Mining and
-								Analysis". View the report <a href="assets/docs/b365-report.pdf">here</a>.
-							</p>
-						</div>
-					</article>
-					<article>
-						<a class="image"><img alt="B351" src="assets/images/projects/proj-b351.jpg"/></a>
-						<div class="inner">
-							<h4>Cryptocurrency Analysis AI</h4>
-							<p>Developed an AI in a team of two that predicts when to buy and sell popular cryptocurrencies. I used
-								<strong>R</strong> for data preprocessing, <strong>Python</strong> for creating a framework, and the
-								<strong>TensorFlow</strong> library for training a recurrent neural network (RNN) model.<br><br>Final
-								project for CSCI-B 351 "Intro to Artificial Intelligence". View the report
-								<a href="assets/docs/b351-report.pdf">here</a>.
-							</p>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
+        <!-- PROJECTS -->
+        <section id="projects">
+          <div class="container">
+            <h2>Projects</h2>
 
-		<!-- TECHNICAL SKILLS -->
-		<section id="skills">
-			<div class="container">
-				<h3>Skills</h3>
-				<div class="features">
-					<h4>Programming</h4>
-					<ul class="skills-list">
-						<li>Scala</li>
-						<li>Python</li>
-						<li>Java</li>
-						<li>R</li>
-						<li>Go</li>
-						<li>ReactJS</li>
-						<ul class="skills-inner-list">
-							<li>JavaScript / JSX</li>
-							<li>TypeScript / TSX</li>
-						</ul>
-						<li>C</li>
-						<li><a href="https://racket-lang.org/">Racket</a></li>
-					</ul>
-					<h4>Libraries</h4>
-					<ul class="skills-list">
-						<li><a href="https://scikit-learn.org/stable/">scikit-learn (sklearn)</a></li>
-						<li><a href="https://numpy.org/">Numpy</a></li>
-						<li><a href="https://pandas.pydata.org/">Pandas</a></li>
-						<li><a href="https://www.nltk.org/">NLTK</a></li>
-					</ul>
-					<h4>Databases</h4>
-					<ul class="skills-list">
-						<li>Apache Spark</li>
-						<li>Apache Hive</li>
-						<li>PostgreSQL</li>
-						<li>Apache Hadoop</li>
-					</ul>
-					<h4>Typesetting, Markup & Style</h4>
-					<ul class="skills-list">
-						<li><img alt="LaTeX" height="18" src="assets/images/text/latex.png"/></li>
-						<li>R Markdown</li>
-						<li>HTML</li>
-						<li>CSS / SCSS</li>
-					</ul>
-					<h4>Development Environments & Software</h4>
-					<ul class="skills-list">
-						<li>JetBrains IDEs</li>
-						<ul class="skills-inner-list">
-							<li>IntelliJ IDEA Ultimate</li>
-							<li>PyCharm Professional</li>
-							<li>GoLand</li>
-							<li>DataGrip</li>
-							<li>WebStorm</li>
-							<li>CLion</li>
-						</ul>
-						<li>Git</li>
-						<li>RStudio</li>
-						<li>Google Colab</li>
-						<li>Microsoft Office</li>
-						<ul class="skills-inner-list">
-							<li>Word</li>
-							<li>Excel</li>
-							<li>PowerPoint</li>
-						</ul>
-						<li>Visual Studio 2019</li>
-						<li>Visual Studio Code</li>
-						<li>Adobe Creative Cloud</li>
-						<ul class="skills-inner-list">
-							<li>Photoshop CC</li>
-							<li>Illustrator CC</li>
-							<li>Dreamweaver CC</li>
-						</ul>
-						<li>CLIP STUDIO PAINT</li>
-					</ul>
-					<h4>Operating Systems</h4>
-					<ul class="skills-list">
-						<li>Linux</li>
-						<ul class="skills-inner-list">
-							<li>Ubuntu</li>
-							<li>Ubuntu Server</li>
-							<li>Linux Mint</li>
-						</ul>
-						<li>Microsoft Windows</li>
-						<li>MacOS</li>
-						<li>Android</li>
-					</ul>
-					<h4>Languages (<a href="https://en.wikipedia.org/wiki/ILR_scale">ILR Scale</a>)</h4>
-					<ul class="skills-list">
-						<li>English &mdash; Native (ILR 5)</li>
-						<li>Spanish &mdash; ILR 2</li>
-						<li><a href="https://en.wikipedia.org/wiki/Esperanto">Esperanto</a> &mdash; ILR 1</li>
-					</ul>
-				</div>
-			</div>
-		</section>
+            <div class="features">
+              <article>
+                <a class="image"><img alt="Deep Neural Network" src="assets/images/projects/dnn.png" /></a>
+                <div class="inner">
+                  <h3>Speech Synthesis for the Chuvash Language with Deep Neural Networks</h3>
+                  <p>
+                    I trained a few popular speech synthesizers to produce intelligible Chuvash audio clips from written samples of the language. I used <b>Python</b> as the primary programming
+                    language and <b>R</b> for processing non-audio data. Special permission was granted to train neural networks for each speech synthesis solution on IU's
+                    <a href="https://kb.iu.edu/d/bcqt">Big Red II</a> supercomputer.
+                  </p>
+                  <p>
+                    This was the final project project for LING-L 445 "Computation and Linguistic Analysis," a graduate level course.
+                  </p>
+                  <h4>Links:</h4>
+                  <ul>
+                    <li><a href="assets/docs/proposals/l445-chuvash.pdf">Submitted Paper</a></li>
+                    <li><a href="assets/docs/papers/l445-chuvash-rfp.pdf">Request for Proposal (RFP)</a></li>
+                    <li><a href="https://github.com/danterazo/SP19-LING-L545">Code & Assets</a></li>
+                  </ul>
+                </div>
+              </article>
+              <article>
+                <a class="image"><img alt="RStudio IDE" src="assets/images/projects/rstudio.png" /></a>
+                <div class="inner">
+                  <h3>TechPointX Xbot Digital Assistant Data Analysis</h3>
+                  <p>
+                    I used <b>R</b> to observe trends in a provided dataset and wrote a report to discuss my findings. This was part of the data science technical screening for the Xtern Summer 2019
+                    internship program. I passed the screening and earned a spot in the Xtern Class of 2019 as a Software Engineer.
+                  </p>
+                  <p>
+                    View the report <a href="assets/docs/tech-screenings/xtern2019-datascience.pdf">here</a>.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <a class="image topAligned"><img alt="Xtern Bootcamp" src="assets/images/projects/xtern-bootcamp.png" /></a>
+                <div class="inner">
+                  <h3>Web Development Projects for Xtern Bootcamp 2018</h3>
+                  <p>
+                    I worked on 4 projects for Xtern Bootcamp 2018 that utilized a mix of <b>HTML</b>, <b>JavaScript</b>, the <b>ReactJS</b> library, and <b>CSS</b>.
+                  </p>
+                  <ol type="1">
+                    <li><a href="https://danterazo.github.io/chrismess/">Chrismess</a></li>
+                    <ul>
+                      <li> Served as an introduction to the DOM and DOM Manipulation. </li>
+                      <li> <a href="https://github.com/danterazo/chrismess">Source Code</a> </li>
+                    </ul>
+                    <li> <a href="https://danterazo.github.io/dwarf-underground/">Dwarf Underground</a> </li>
+                    <ul>
+                      <li> Exercise in translating vanilla HTML and JavaScript to React components and JSX. </li>
+                      <li> <a href="https://github.com/danterazo/dwarf-underground">Source Code</a> </li>
+                    </ul>
+                    <ul>
+                      <li> <a href="https://github.com/danterazo/api-party">API Party (Code, <b>WIP</b>)</a> </li>
+                      <li> Exercise in API usage; abandoned in favor of Chatarang due to limited time. </li>
+                    </ul>
+                    <li> <a href="https://chat-xtern.firebaseapp.com/">Chatarang</a> </li>
+                    <ul>
+                      <li> Chat app that utilizes Firebase for GitHub/Google authentication and message storage in a database. </li>
+                      <li> <a href="https://github.com/danterazo/chatarang">Source Code</a> </li>
+                    </ul>
+                  </ol>
+                </div>
+              </article>
+              <article>
+                <a class="image"><img alt="C212" src="assets/images/projects/proj-c212.jpg" /></a>
+                <div class="inner">
+                  <h3>Jungle: Java-Based Marketplace</h3>
+                  <p>
+                    An Amazon-esque marketplace written in <b>Java</b> by a team of three. Jungle lets you register as a buyer or seller, list items for sale, buy items, receive shipping
+                    notifications, manage your account, and more. It uses CSV files to keep an offline database of accounts and inventory.
+                  </p>
+                  <p>
+                    Final project for CSCI-C 212 "Software Systems".
+                  </p>
+                </div>
+              </article>
+              <article>
+                <a class="image"><img alt="B365" src="assets/images/projects/proj-b365.png" /></a>
+                <div class="inner">
+                  <h3>Porto Seguro Safe Driver Prediction</h3>
+                  <p>
+                    Used data provided by Brazilian auto insurance company Porto Seguro to predict the probability of a driver initiating an insurance claim in the next year. Used <strong>R</strong>
+                    for data preprocessing and <strong>Python</strong> to train an XGBoost model.
+                  </p>
+                  <p>
+                    Final project for CSCI-B 365 "Data Mining and Analysis". View the report <a href="assets/docs/reports/b365-report.pdf">here</a>.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <a class="image"><img alt="B351" src="assets/images/projects/proj-b351.jpg" /></a>
+                <div class="inner">
+                  <h3>Cryptocurrency Analysis AI</h3>
+                  <p>
+                    Developed an AI in a team of two that predicts when to buy and sell popular cryptocurrencies. I used <strong>R</strong> for data preprocessing, <strong>Python</strong> for creating
+                    a framework, and the <strong>TensorFlow</strong> library for training a recurrent neural network (RNN) model.
+                  </p>
+                  <p>
+                    Final project for CSCI-B 351 "Intro to Artificial Intelligence". View the report <a href="assets/docs/reports/b351-report.pdf">here</a>.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
 
-		<!-- Awards -->
-		<section id="awards">
-			<div class="container">
-				<h3>Awards and Honors</h3>
-				<p>Below are some distinctions I've earned in my career so far.</p>
-				<div class="features">
-					<article>
-						<a class="image"><img alt="" src="assets/images/awards/acc-luddy.png"/></a>
-						<div class="inner">
-							<h4>Dean's List</h4>
-							<p>Significant academic distinction given to those who attain a highgrade point average.</p>
-						</div>
-					</article>
-					<article>
-						<a class="image"><img alt="" src="assets/images/awards/acc-hhsp.jpg"/></a>
-						<div class="inner">
-							<h4>Hudson and Holland Scholar</h4>
-							<p>Distinction given to underrepresented minority students at IU who are, in the program's words, "leaders and
-								model citizens of the campus community."</p>
-						</div>
-					</article>
-					<article>
-						<a class="image"><img alt="" src="assets/images/awards/acc-hsf.png"/></a>
-						<div class="inner">
-							<h4>Hispanic Scholarship Fund Scholar</h4>
-							<p>Distinction and award given to students who are, in the organization's words, "among the best and brightest
-								Latino students in the country."</p>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
+        <!-- TECHNICAL SKILLS -->
+        <section id="skills">
+          <div class="container">
+            <h2>Skills</h2>
 
-		<!-- Contact -->
-		<section id="contact">
-			<div class="container">
-				<h3>Contact Me</h3>
-				<p>
-					<strong>Email:</strong> dante (at) razonet.org <br> <strong>Signing:</strong> <a href="assets/files/dante-pgp.asc">Public PGP Key</a>
-				</p>
-			</div>
-		</section>
-	</div>
+            <div class="features">
+              <h3>Programming</h3>
+              <ul class="skills-list">
+                <li>Scala</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>R</li>
+                <li>Go</li>
+                <li>ReactJS</li>
+                <ul class="skills-inner-list">
+                  <li>JavaScript (JSX)</li>
+                  <li>TypeScript (TSX)</li>
+                </ul>
+                <li>C</li>
+                <li><a href="https://racket-lang.org/">Racket</a></li>
+              </ul>
+              <h3>Libraries</h3>
+              <ul class="skills-list">
+                <li><a href="https://scikit-learn.org/stable/">scikit-learn (sklearn)</a></li>
+                <li><a href="https://numpy.org/">Numpy</a></li>
+                <li><a href="https://pandas.pydata.org/">Pandas</a></li>
+                <li><a href="https://www.nltk.org/">NLTK</a></li>
+              </ul>
+              <h3>Databases</h3>
+              <ul class="skills-list">
+                <li>Apache Spark</li>
+                <li>Apache Hive</li>
+                <li>PostgreSQL</li>
+                <li>Apache Hadoop</li>
+              </ul>
+              <h3>Typesetting, Markup & Style</h3>
+              <ul class="skills-list">
+                <li> <img alt="LaTeX" height="18" src="assets/images/text/latex.png" /> </li>
+                <li>R Markdown</li>
+                <li>HTML</li>
+                <li>CSS / SCSS</li>
+              </ul>
+              <h3>Development Environments & Software</h3>
+              <ul class="skills-list">
+                <li>JetBrains IDEs</li>
+                <ul class="skills-inner-list">
+                  <li>IntelliJ IDEA Ultimate</li>
+                  <li>PyCharm Professional</li>
+                  <li>GoLand</li>
+                  <li>DataGrip</li>
+                  <li>WebStorm</li>
+                  <li>CLion</li>
+                </ul>
+                <li>Visual Studio Code</li>
+                <li>Git</li>
+                <li>RStudio</li>
+                <li>Google Colab</li>
+                <li>Microsoft Office</li>
+                <ul class="skills-inner-list">
+                  <li>Word</li>
+                  <li>Excel</li>
+                  <li>PowerPoint</li>
+                </ul>
+                <li>Visual Studio 2019</li>
+                <li>Adobe Creative Cloud</li>
+                <ul class="skills-inner-list">
+                  <li>Photoshop CC</li>
+                  <li>Illustrator CC</li>
+                  <li>Dreamweaver CC</li>
+                </ul>
+                <li>Affinity Photo 2</li>
+                <li>Clip Studio Paint</li>
+              </ul>
+              <h3>Operating Systems</h3>
+              <ul class="skills-list">
+                <li>Linux</li>
+                <ul class="skills-inner-list">
+                  <li>Ubuntu</li>
+                  <li>Ubuntu Server</li>
+                  <li>Linux Mint</li>
+                </ul>
+                <li>Microsoft Windows</li>
+                <li>MacOS</li>
+                <li>Android</li>
+              </ul>
+              <h3>Languages (<a href="https://en.wikipedia.org/wiki/ILR_scale">ILR Scale</a>)</h3>
+              <ul class="skills-list">
+                <li>English &mdash; Native (ILR 5)</li>
+                <li>Spanish &mdash; ILR 2</li>
+                <li> <a href="https://en.wikipedia.org/wiki/Esperanto">Esperanto</a> &mdash; ILR 1 </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-	<!-- Footer -->
-	<section id="footer">
-		<div class="container">
-			<ul class="copyright">
-				<li> <!-- closed within following JavaScript -->
-					<script>
-						const lastUpdated = "Last Updated: " + new Date(document.lastModified)
-						const offset = "Last Updated: ".length
+        <!-- Awards -->
+        <section id="awards">
+          <div class="container">
+            <h2>Awards and Honors</h2>
 
-						document.writeln("&copy; Dante Razo, 2017-" + lastUpdated.substring(25, 29)
-							+ ". All rights reserved.</li>") // close initial <li> tag
-						document.writeln("<li>");
-						document.write(lastUpdated.substring(0, 17) + ", " + lastUpdated.substring(17, 29));
-						document.writeln("</li>");
-					</script>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</section>
-</div>
+            <div class="features">
+              <article>
+                <a class="image"><img alt="" src="assets/images/awards/acc-luddy.png" /></a>
+                <div class="inner">
+                  <h3>Dean's List</h3>
+                  <p>Significant academic distinction given to those who attain a high grade point average.</p>
+                </div>
+              </article>
+              <article>
+                <a class="image"><img alt="" src="assets/images/awards/acc-hhsp.jpg" /></a>
+                <div class="inner">
+                  <h3>Hudson and Holland Scholar</h3>
+                  <p>Distinction given to underrepresented minority students at IU who are, in the program's words, "leaders and model citizens of the campus community."</p>
+                </div>
+              </article>
+              <article>
+                <a class="image"><img alt="" src="assets/images/awards/acc-hsf.png" /></a>
+                <div class="inner">
+                  <h3>Hispanic Scholarship Fund Scholar</h3>
+                  <p>Distinction and award given to students who are, in the organization's words, "among the best and brightest Latino students in the country."</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollzer.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
-<!--[if lte IE 8]>
-<script src="assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="assets/js/main.js"></script>
-</body>
+        <!-- Contact -->
+        <section id="contact">
+          <div class="container">
+            <h2>Contact Me</h2>
+            <p>
+              <strong>Email:</strong> dante (at) razonet.org <br>
+              <strong>Signing:</strong>
+              <a href="assets/files/dante-pgp.asc">Public PGP Key</a>
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <section id="footer">
+        <div class="container">
+          <ul class="copyright">
+            <li>
+              <!-- closed within following JavaScript -->
+              <script>
+                lastUpdated =
+                  "Last Updated: " + new Date(document.lastModified);
+                const offset = "Last Updated: ".length;
+
+                document.writeln(
+                  "&copy; Dante Razo, 2017-" +
+                  lastUpdated.substring(25, 29) +
+                  ". All rights reserved.</li>"
+                ); // close initial <li> tag
+                document.writeln("<li>");
+                document.write(
+                  lastUpdated.substring(0, 17) +
+                  ", " +
+                  lastUpdated.substring(17, 29)
+                );
+                document.writeln("</li>");
+              </script>
+            </li>
+
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollzer.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]>
+      <script src="assets/js/ie/respond.min.js"></script
+    ><![endif]-->
+    <script src="assets/js/main.js"></script>
+  </body>
+
 </html>
 
 <!--
