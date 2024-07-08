@@ -1987,6 +1987,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 2.5em;
+    line-height: 1.5em;
+}
+
 h2 {
     font-size: 2em;
     line-height: 1.5em;
@@ -2109,7 +2114,7 @@ header h6 + p {
     line-height: 1.5em;
 }
 
-header.major h2 {
+header.major h1 {
     color: #4acaa8;
     font-size: 3.5em;
 }
