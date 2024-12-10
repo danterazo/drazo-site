@@ -3,3 +3,6 @@
 
 # working folders
 local/
+
+# WSL2 residuals
+*:Zone.Identifier
